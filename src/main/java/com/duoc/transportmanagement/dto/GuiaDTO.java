@@ -16,7 +16,7 @@ public class GuiaDTO {
 
     private String descripcionCarga;
 
-    private boolean estado;
+    private String estado;
 
     private String rutaEfs;
 
@@ -74,11 +74,11 @@ public class GuiaDTO {
         this.descripcionCarga = descripcionCarga;
     }
 
-    public boolean isEstado() {
+    public String isEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void setEstado(String estado) {
         this.estado = estado;
     }
 

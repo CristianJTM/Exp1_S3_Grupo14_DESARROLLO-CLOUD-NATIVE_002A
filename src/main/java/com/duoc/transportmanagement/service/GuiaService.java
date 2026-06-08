@@ -343,6 +343,8 @@ public class GuiaService {
 
         dto.setId(guia.getId());
         dto.setNumeroGuia(guia.getNumeroGuia());
+        dto.setFechaGeneracion(guia.getFechaGeneracion());
+        dto.setEstado(guia.getEstado());
 
         dto.setCliente(guia.getCliente());
         dto.setDireccionEntrega(guia.getDireccionEntrega());
