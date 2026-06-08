@@ -385,6 +385,10 @@ public class GuiaService {
                         .getNombre()
         );
 
+        dto.setEstado(guia.getEstado());
+
+        dto.setFechaGeneracion(guia.getFechaGeneracion());
+
         return dto;
     }
 }

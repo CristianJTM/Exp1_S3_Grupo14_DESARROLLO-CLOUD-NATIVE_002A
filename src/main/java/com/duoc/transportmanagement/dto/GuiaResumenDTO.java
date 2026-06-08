@@ -14,6 +14,8 @@ public class GuiaResumenDTO {
 
     private String transportista;
 
+    private String estado;
+
     public Long getId() {
         return id;
     }
@@ -54,13 +56,13 @@ public class GuiaResumenDTO {
         this.transportista = transportista;
     }
 
-    public boolean isEstado() {
+    public String isEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void setEstado(String estado) {
         this.estado = estado;
     }
 
-    private boolean estado;
+
 }
