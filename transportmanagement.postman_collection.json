@@ -1,0 +1,361 @@
+{
+  "info": {
+    "_postman_id": "d73ea88a-4bb7-4c49-abd5-5208c2e0f82a",
+    "name": "transportmanagement",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40703045"
+  },
+  "item": [
+    {
+      "name": "POST TRANSPORTISTA 1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombre\": \"Transportes del Sur\",\r\n    \"rut\": \"76543210-5\",\r\n    \"telefono\": \"+56912345678\",\r\n    \"correo\": \"contacto@transportesdelsur.cl\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://107.21.239.152:8080/api/transportistas",
+          "protocol": "http",
+          "host": [
+            "107",
+            "21",
+            "239",
+            "152"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "transportistas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST GUIA 1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"numeroGuia\": 1001,\r\n    \"cliente\": \"Empresa ABC\",\r\n    \"direccionEntrega\": \"Av. Apoquindo 4500, Las Condes\",\r\n    \"descripcionCarga\": \"20 cajas de equipos electrónicos\",\r\n    \"transportistaId\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://107.21.239.152:8080/api/guias",
+          "protocol": "http",
+          "host": [
+            "107",
+            "21",
+            "239",
+            "152"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "guias"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST GUIA 1 generar en efs",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://107.21.239.152:8080/api/guias/1/generar",
+          "protocol": "http",
+          "host": [
+            "107",
+            "21",
+            "239",
+            "152"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "guias",
+            "1",
+            "generar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST GUIA 1 subir a s3",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://107.21.239.152:8080/api/guias/1/s3",
+          "protocol": "http",
+          "host": [
+            "107",
+            "21",
+            "239",
+            "152"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "guias",
+            "1",
+            "s3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST TRANSPORTISTA 2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombre\": \"Logistica Express\",\r\n    \"rut\": \"78945612-3\",\r\n    \"telefono\": \"+56987654321\",\r\n    \"correo\": \"operaciones@logisticaexpress.cl\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://107.21.239.152:8080/api/transportistas",
+          "protocol": "http",
+          "host": [
+            "107",
+            "21",
+            "239",
+            "152"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "transportistas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST GUIA 2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"numeroGuia\": 1002,\r\n    \"cliente\": \"Constructora Andes\",\r\n    \"direccionEntrega\": \"Camino Melipilla 1500, Maipú\",\r\n    \"descripcionCarga\": \"Materiales de construcción\",\r\n    \"transportistaId\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://107.21.239.152:8080/api/guias",
+          "protocol": "http",
+          "host": [
+            "107",
+            "21",
+            "239",
+            "152"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "guias"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET GUIAS",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://107.21.239.152:8080/api/guias",
+          "protocol": "http",
+          "host": [
+            "107",
+            "21",
+            "239",
+            "152"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "guias"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET GUIAS POR TRANSPORTISTA",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://107.21.239.152:8080/api/guias/transportista/1",
+          "protocol": "http",
+          "host": [
+            "107",
+            "21",
+            "239",
+            "152"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "guias",
+            "transportista",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET GUIAS POR FECHA",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://107.21.239.152:8080/api/guias/fecha/2026-06-08",
+          "protocol": "http",
+          "host": [
+            "107",
+            "21",
+            "239",
+            "152"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "guias",
+            "fecha",
+            "2026-06-08"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET GUIAS DOWNLOAD",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://107.21.239.152:8080/api/guias/1/download",
+          "protocol": "http",
+          "host": [
+            "107",
+            "21",
+            "239",
+            "152"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "guias",
+            "1",
+            "download"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT GUIA 1",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"numeroGuia\": 1001,\r\n    \"cliente\": \"Empresa ABC\",\r\n    \"direccionEntrega\": \"Av. Apoquindo 990, Las Condes\",\r\n    \"descripcionCarga\": \"20 cajas de equipos electrónicos\",\r\n    \"transportistaId\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://107.21.239.152:8080/api/guias/1",
+          "protocol": "http",
+          "host": [
+            "107",
+            "21",
+            "239",
+            "152"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "guias",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT GUIA 1 Copy",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"numeroGuia\": 1001,\r\n    \"cliente\": \"Empresa ABC\",\r\n    \"direccionEntrega\": \"Av. Apoquindo 990, Las Condes\",\r\n    \"descripcionCarga\": \"20 cajas de equipos electrónicos\",\r\n    \"transportistaId\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://107.21.239.152:8080/api/guias/1",
+          "protocol": "http",
+          "host": [
+            "107",
+            "21",
+            "239",
+            "152"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "guias",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
