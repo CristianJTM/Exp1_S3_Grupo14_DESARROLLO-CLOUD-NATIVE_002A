@@ -110,10 +110,11 @@ public class GuiaController {
     // PUT - Actualizar archivo en S3
     @PutMapping("/{id}/s3")
     public ResponseEntity<String> actualizarArchivoS3(
-            @PathVariable Long id) {
+            @PathVariable Long id,
+            @RequestBody GuiaUpdateDTO dto) {
 
         return ResponseEntity.ok(
-                guiaService.actualizarArchivoS3(id)
+                guiaService.actualizarArchivoS3(id, dto)
         );
     }
 

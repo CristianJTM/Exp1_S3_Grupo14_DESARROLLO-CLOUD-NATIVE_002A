@@ -247,7 +247,8 @@ public class GuiaService {
         return resultado;
     }
 
-    public String actualizarArchivoS3(Long id){
+    public String actualizarArchivoS3(Long id, GuiaUpdateDTO dto){
+
 
         GuiaDespacho guia = guiaRepository.findById(id)
                 .orElseThrow(() ->
@@ -260,6 +261,8 @@ public class GuiaService {
                     guia.getRutaS3()
             );
         }
+
+        updateGuia(id, dto);
 
         generarArchivo(id);
 
