@@ -119,7 +119,7 @@ public class GuiaController {
     }
 
     // GET - Descargar archivo
-    @GetMapping("/{id}/download")
+    @GetMapping("/s3/{id}")
     public ResponseEntity<byte[]> descargarArchivo(
             @PathVariable Long id) {
 
